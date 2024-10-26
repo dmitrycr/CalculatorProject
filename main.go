@@ -3,7 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(Calc("1+1"))
+	expression := "(1+2)*3"
+	result, err := Calc(expression)
+	if err != nil {
+		fmt.Println("Ошибка:", err)
+	} else {
+		fmt.Printf("%.2f\n", result)
+	}
 }
 
 /*
